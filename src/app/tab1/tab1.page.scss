@@ -1,0 +1,67 @@
+ion-header {
+    background: #00377D;
+    width: 360px;
+    height: 170px;
+}
+
+ion-toolbar {
+    --background: transparent;
+}
+
+.logo-tienda {
+    width: 100%;
+    height: 26px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-top: 12px;
+}
+
+.icono {
+    width: 40px;
+    height: 43px;
+}
+
+.bienvenido-text {
+    color: #00377D;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15px;
+    width: 262px;
+    height: 23px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-align: center;
+}
+
+.card-binenvenida {
+    width: 100%;
+    box-shadow: none !important;
+}
+
+.subtitle-bienvenido {
+    /* Body/Body 2 */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 0px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.25px;
+    /* Grey palette/Grey 70 */
+    color: #5C5E60;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+}

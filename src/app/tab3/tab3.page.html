@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Tab 3
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Tab 3</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <div id="container">
+        <app-login-button *ngIf="(auth.isAuthenticated$ | async) === false"></app-login-button>
+
+        <app-perfil></app-perfil>
+
+        <app-logout-button *ngIf="auth.isAuthenticated$ | async"></app-logout-button>
+    </div>
+
+    <iframe src='https://stackoverflow.com/'></iframe>
+
+    <app-explore-container name="Tab 3 page"></app-explore-container>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <!-- <ion-title>
+        </ion-title> -->
+    </ion-toolbar>
+    <div class="logo-tienda">
+        <ion-icon name="storefront-outline" class="icono"></ion-icon><br>
+        <img src="../../assets/imagenes/mi-tienda 1.png">
+    </div>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-item lines="none">
+            <ion-card class="card-binenvenida">
+                <ion-card-header>
+                    <p class="ion-text-center bienvenido-text ">¡Bienvenido!</p>
+                    <p class="ion-text-center subtitle-bienvenido">Ingresa tu número de teléfono</p>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-item lines="none">
+
+                    </ion-item>
+                </ion-card-content>
+            </ion-card>
+
+        </ion-item>
+        <ion-item *ngFor="let file of images; let i=i ndex ">
+            <ion-thumbnail slot="start ">
+                <ion-img [src]="file.data "></ion-img>
+            </ion-thumbnail>
+            <ion-label class="ion-text-wrap ">
+                {{ file.name }}
+            </ion-label>
+            <ion-button slot="end " fill="clear " (click)="startUpload(file) ">
+                <ion-icon slot="icon-only " name="cloud-upload "></ion-icon>
+            </ion-button>
+            <ion-button slot="end " fill="clear " (click)="deleteImage(file) ">
+                <ion-icon slot="icon-only " name="trash "></ion-icon>
+            </ion-button>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="primary ">
+        <ion-button fill="clear " expand="full " color="light " (click)="selectImage() ">
+            <ion-icon slot="start " name="camera "></ion-icon>
+            Select Image
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>
